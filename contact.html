@@ -1,0 +1,70 @@
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d21818;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #0412aa;
+      color: rgb(255, 255, 255);
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #3753a0;
+      padding: 20px;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h3>Kirim Pesan ke saya</h3>
+    
+    <div class="container">
+      <form action="/action_page.php">
+        <label for="fname">Nama Lengkap</label>
+        <input type="text" id="fname" name="Namalengkapmu" placeholder="Nama Lengkapmu..">
+    
+        <label for="lname">Judul Poster</label>
+        <input type="text" id="lname" name="NamaPoster" placeholder="Nama Poster..">
+    
+        <label for="country">Pilih</label>
+        <select id="country" name="country">
+          <option value="Gebog">Gebog</option>
+          <option value="Besito">Besito</option>
+          <option value="Jurang">Jurang</option>
+          <option value="Ngemplak">Ngemplak</option>
+          <option value="Menawan">Menawan</option>
+        </select>
+    
+        <label for="subject">Thema</label>
+        <textarea id="Tema" name="Tema" placeholder="thema yang kamu inginkan / masalah apa yang kamu ingin sampaikan" style="height:200px"></textarea>
+    
+        <input type="submit" value="Kirim">
+      </form>
+    </div>
+    <hr>
+    <footer style="text-align: center;">
+        <p>Copyright &copy; 2023 Indra Permana Putra</p>
+    </footer>
+    
+    </body>
+    </html>
+    
