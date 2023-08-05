@@ -1,3 +1,4 @@
+
 <style>
     body {font-family: Arial, Helvetica, sans-serif;}
     * {box-sizing: border-box;}
@@ -33,17 +34,22 @@
     }
     </style>
     </head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact From To Email Using JavaScript</title>
+  
     <body>
     
     <h3>Kirim Pesan ke saya</h3>
     
     <div class="container">
-      <form action="/action_page.php">
+      <form onsubmit="sendEmail(); reset(); return false">
         <label for="fname">Nama Lengkap</label>
         <input type="text" id="fname" name="Namalengkapmu" placeholder="Nama Lengkapmu..">
-    
+        <label for="lname">Email</label>
+        <input type="text" id="fname" name="Email" placeholder="indraganz@gmail.com">
         <label for="lname">Judul Poster</label>
         <input type="text" id="lname" name="NamaPoster" placeholder="Nama Poster..">
+
     
         <label for="country">Pilih</label>
         <select id="country" name="country">
@@ -58,11 +64,27 @@
         <textarea id="Tema" name="Tema" placeholder="thema yang kamu inginkan / masalah apa yang kamu ingin sampaikan" style="height:200px"></textarea>
     
         <input type="submit" value="Kirim">
+
       </form>
     </div>
-    <hr>
-    <footer style="text-align: center;">
-        <p>Copyright &copy; 2023 Indra Permana Putra</p>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "udinlatif68@gmail.com",
+    Password : "Indra Ganz",
+    To : 'udinlatif68@gmail.com',
+    From : "udinlatif68@gmail.com",
+    Subject : "This is the subject",
+    Body : "Nama Lengkap: " + document.getElementById("name").value
+    + "<br> Email: " <document.getElementById("email").value
+    + "<br> Jjudul: " <document.getElementById("judul").value
+    + "<br> Thema: " <document.getElementById("thema").value
+}).then(
+  message => alert("Pesan Telah Terkirim")
+      }
+  
     </footer>
     
     </body>
